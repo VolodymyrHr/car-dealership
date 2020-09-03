@@ -9,7 +9,5 @@ namespace car_dealership.Models
         public string Brand { get; set; }
         public string Model { get; set; }
         public float Cost { get; set; }
-
-        public ICollection<SalesContract> SalesContract { get; set; }
     }
 }

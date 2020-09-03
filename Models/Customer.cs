@@ -7,7 +7,5 @@ namespace car_dealership.Models
     {
         public int ID { get; set; }
         public string Name { get; set; }
-
-        public ICollection<SalesContract> SalesContract { get; set; }
     }
 }

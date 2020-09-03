@@ -70,7 +70,7 @@ namespace car_dealership.Migrations
                     b.ToTable("Manager");
                 });
 
-            modelBuilder.Entity("car_dealership.Models.SalesContract", b =>
+            modelBuilder.Entity("car_dealership.Models.Deal", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
@@ -97,25 +97,25 @@ namespace car_dealership.Migrations
 
                     b.HasIndex("ManagerID");
 
-                    b.ToTable("SalesContract");
+                    b.ToTable("Deal");
                 });
 
-            modelBuilder.Entity("car_dealership.Models.SalesContract", b =>
+            modelBuilder.Entity("car_dealership.Models.Deal", b =>
                 {
                     b.HasOne("car_dealership.Models.Car", "Car")
-                        .WithMany("SalesContract")
+                        .WithMany("Deal")
                         .HasForeignKey("CarID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("car_dealership.Models.Customer", "Customer")
-                        .WithMany("SalesContract")
+                        .WithMany("Deal")
                         .HasForeignKey("CustomerID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("car_dealership.Models.Manager", "Manager")
-                        .WithMany("SalesContract")
+                        .WithMany("Deal")
                         .HasForeignKey("ManagerID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();

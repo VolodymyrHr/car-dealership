@@ -49,7 +49,7 @@ namespace car_dealership.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "SalesContract",
+                name: "Deal",
                 columns: table => new
                 {
                     ID = table.Column<int>(nullable: false)
@@ -61,21 +61,21 @@ namespace car_dealership.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_SalesContract", x => x.ID);
+                    table.PrimaryKey("PK_Deal", x => x.ID);
                     table.ForeignKey(
-                        name: "FK_SalesContract_Car_CarID",
+                        name: "FK_Deal_Car_CarID",
                         column: x => x.CarID,
                         principalTable: "Car",
                         principalColumn: "ID",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_SalesContract_Customer_CustomerID",
+                        name: "FK_Deal_Customer_CustomerID",
                         column: x => x.CustomerID,
                         principalTable: "Customer",
                         principalColumn: "ID",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_SalesContract_Manager_ManagerID",
+                        name: "FK_Deal_Manager_ManagerID",
                         column: x => x.ManagerID,
                         principalTable: "Manager",
                         principalColumn: "ID",
@@ -83,25 +83,25 @@ namespace car_dealership.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_SalesContract_CarID",
-                table: "SalesContract",
+                name: "IX_Deal_CarID",
+                table: "Deal",
                 column: "CarID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_SalesContract_CustomerID",
-                table: "SalesContract",
+                name: "IX_Deal_CustomerID",
+                table: "Deal",
                 column: "CustomerID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_SalesContract_ManagerID",
-                table: "SalesContract",
+                name: "IX_Deal_ManagerID",
+                table: "Deal",
                 column: "ManagerID");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "SalesContract");
+                name: "Deal");
 
             migrationBuilder.DropTable(
                 name: "Car");

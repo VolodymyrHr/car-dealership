@@ -12,6 +12,6 @@ namespace car_dealership.Data
         public DbSet<Car> Car {get; set;}
         public DbSet<Customer> Customer {get; set;}
         public DbSet<Manager> Manager {get; set;}
-        public DbSet<SalesContract> SalesContract {get; set;}
+        public DbSet<Deal> Deal {get; set;}
     }
 }
