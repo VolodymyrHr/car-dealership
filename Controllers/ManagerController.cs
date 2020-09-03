@@ -17,7 +17,7 @@ namespace car_dealership.Controllers
         }
 
         [HttpGet]
-        public List<Manager> getAll(){
+        public List<Manager> GetManagers(){
             return _managerService.getListManagers();
         }
     }

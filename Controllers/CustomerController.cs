@@ -17,7 +17,7 @@ namespace car_dealership.Controllers
         }
 
         [HttpGet]
-        public List<Customer> getAll(){
+        public List<Customer> GetCustomers(){
             return _customerService.getListCustomers();
         }
     }
