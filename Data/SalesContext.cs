@@ -13,5 +13,13 @@ namespace car_dealership.Data
         public DbSet<Customer> Customer {get; set;}
         public DbSet<Manager> Manager {get; set;}
         public DbSet<Deal> Deal {get; set;}
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Car>().ToTable("Cars");
+            modelBuilder.Entity<Customer>().ToTable("Customers");
+            modelBuilder.Entity<Manager>().ToTable("Managers");
+            modelBuilder.Entity<Deal>().ToTable("Deals");
+        }
     }
 }
