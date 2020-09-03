@@ -12,6 +12,7 @@ using Microsoft.Extensions.Hosting;
 using car_dealership.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Http;
+using car_dealership.Services;
 
 namespace car_dealership
 {
@@ -31,6 +32,8 @@ namespace car_dealership
 
             services.AddDbContext<SalesContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddScoped<CarService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

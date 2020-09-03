@@ -4,11 +4,11 @@ using car_dealership.Data;
 using car_dealership.Models;
 
 namespace car_dealership.Services{
-    class CarService
+    public class CarService
     {
-        private SalesContext _context;
+        SalesContext _context;
 
-        CarService(SalesContext context){
+        public CarService(SalesContext context){
             this._context = context;
         }
 
