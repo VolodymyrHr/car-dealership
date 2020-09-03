@@ -25,6 +25,7 @@ namespace car_dealership
                 {
                     var context = services.GetRequiredService<SalesContext>();
                     DbInitializer.Initialize(context);
+                    Console.WriteLine("All rite -------------------------- )");
                 }
                 catch (Exception ex)
                 {
