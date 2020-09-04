@@ -14,6 +14,10 @@ namespace car_dealership.Services{
         }
 
         public List<Deal> getListDeals(){
+
+
+
+
             return _context.Deal.ToList();
         }
 
