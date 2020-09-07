@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-
 namespace car_dealership.Models
 {
     public class Manager
