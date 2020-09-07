@@ -23,9 +23,15 @@ namespace car_dealership.Controllers
         }
 
         [HttpGet("best")]
-        public ManagerInTime GetBestManager([FromBody] ManagerInTime managerInTime){
+        public ManagerInTime GetBestManager([FromQuery] ManagerInTime managerInTime){// foromQuery
 
             return _managerService.GetBestManagerInTime(managerInTime);
+        }
+
+        [HttpGet("favorite/brand")]
+        public List<FavoriteBrand> GetFavoriteBrand(){
+
+            return _managerService.GetFavoriteBrandForManager();
         }
     }
 }

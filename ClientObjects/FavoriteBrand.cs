@@ -2,11 +2,11 @@ using System;
 
 namespace car_dealership.ClientObjects
 {
-    public class ManagerInTime
+    public class FavoriteBrand
     {
-        public DateTime Beginning {get; set;}
-        public DateTime TheEnd {get; set;}
+        public string Brand {get; set;}
         public int ManagerId  {get; set;}
         public int salesQuantity  {get; set;}
+        public float salesSum  {get; set;}
     }
 }
